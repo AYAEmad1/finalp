@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.CoordinatorController">
+   <children>
+      <MenuBar layoutX="14.0" layoutY="2.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Exit" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Format">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Font Size " />
+                  <MenuItem mnemonicParsing="false" text="Font Family" />
+                  <MenuItem mnemonicParsing="false" text="Background Theme" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text=" About App" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label fx:id="totalfamid" layoutX="52.0" layoutY="89.0" text="Total Families :" />
+      <Label fx:id="famservedid" layoutX="39.0" layoutY="136.0" text="Families served by organization:" />
+      <Label fx:id="famnservid" layoutX="66.0" layoutY="175.0" text="families not served:" />
+      <Button layoutX="181.0" layoutY="226.0" mnemonicParsing="false" onAction="#btnmanagefam" text="Manage Families" />
+      <Button layoutX="208.0" layoutY="281.0" mnemonicParsing="false" onAction="#btnprof" text="Profile" />
+      <Button layoutX="383.0" layoutY="226.0" mnemonicParsing="false" onAction="#btnaidDist" text="Aid Distribution" />
+      <Button layoutX="378.0" layoutY="281.0" mnemonicParsing="false" onAction="#btnchange" text="Change Password" />
+      <Button layoutX="473.0" layoutY="37.0" mnemonicParsing="false" onAction="#btnlogout" text="Logout" />
+   </children>
+</AnchorPane>
