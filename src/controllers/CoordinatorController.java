@@ -60,29 +60,39 @@ public class CoordinatorController implements Initializable {
     @FXML
     private void btnlogout(ActionEvent event) {
         try {
-        
-            Parent p = FXMLLoader.load(getClass().getResource("/views/login.fxml"));
-            Stage stage = (Stage) p.getScene().getWindow();
-            stage.setScene(new Scene(p));
-            stage.show();
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
+        Parent root = FXMLLoader.load(getClass().getResource("/views/login.fxml"));
+
+        Stage stage = (Stage) ((javafx.scene.Node) event.getSource())
+                .getScene()
+                .getWindow();
+
+        stage.setScene(new Scene(root));
+        stage.setTitle("Login");
+        stage.show();
+
+    } catch (IOException ex) {
+        ex.printStackTrace();
     }
+}
+    
 
     
 
   private void openWindow(String fileFXML,String title) {
-       try{
-           Parent p = FXMLLoader.load(getClass().getResource(fileFXML));
-           Stage stage = new Stage();
-           stage.setTitle(title);
-           stage.setScene(new Scene(p));
-           stage.show();
-           
-       }catch(IOException ex){
-           ex.printStackTrace();
-       }
+        try {
+        Parent root = FXMLLoader.load(getClass().getResource("/" + fileFXML));
+
+        Stage stage = (Stage) ((javafx.scene.Node) event.getSource())
+                .getScene()
+                .getWindow();
+
+        stage.setScene(new Scene(root));
+        stage.setTitle(title);
+        stage.show();
+
+    } catch (IOException ex) {
+        ex.printStackTrace();
+    }
     }
 }
 
