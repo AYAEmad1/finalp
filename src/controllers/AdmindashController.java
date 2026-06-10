@@ -56,7 +56,16 @@ public class AdmindashController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-       
+    lbladminid.setText("admin id:" + getAdminId());
+    totalcorid.setText("Total Coordinators: " + ud.countCoordinators());
+    totaluid.setText("Total Users: " + ud.countUsers());
+    totalorgid.setText("Total Organizations: " + ud.countOrganizations());
+    totalfamid.setText("Total Families: " + ud.countFamilies());
+    servid.setText("Served: " + ud.countServedFamilies());
+    noservid.setText("Not Served: " + ud.countNotServedFamilies());
+
+ 
+    txtadminid.clear();
     }    
 
 
