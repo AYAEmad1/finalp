@@ -42,19 +42,19 @@ public class CoordinatorController implements Initializable {
     
     @FXML
     private void btnmanagefam(ActionEvent event) {
-        openWindow("views/family.fxml","Manage Families");
+        openWindow(event,"views/family.fxml","Manage Families");
     }
 
     
     @FXML
     private void btnaidDist(ActionEvent event) {
-        openWindow("views/distribution.fxml","Aid Distribution"); 
+        openWindow(event,"views/distribution.fxml","Aid Distribution"); 
     }
 
   
     @FXML
     private void btnprof(ActionEvent event) {
-        openWindow("views/profile.fxml","My Profile");
+        openWindow(event,"views/profile.fxml","My Profile");
     }
 
     @FXML
@@ -78,7 +78,7 @@ public class CoordinatorController implements Initializable {
 
     
 
-  private void openWindow(String fileFXML,String title) {
+  private void openWindow(ActionEvent event, String fileFXML,String title) {
         try {
         Parent root = FXMLLoader.load(getClass().getResource("/" + fileFXML));
 
